@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: continuum
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: continuum
+  template:
+    metadata:
+      labels:
+        app: continuum
+    spec:
+      containers:
+        - name: continuum
+          image: ghcr.io/your-org/continuum:latest
+          ports:
+            - containerPort: 8080
