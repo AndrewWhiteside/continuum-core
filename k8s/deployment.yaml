@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: continuum
-          image: ghcr.io/your-org/continuum:latest
+          image: continuum:latest
+          imagePullPolicy: Never 
           ports:
             - containerPort: 8080
